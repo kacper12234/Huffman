@@ -5,14 +5,14 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
 public class HelloController {
     @FXML
-    private TextField textField;
+    private TextArea textField;
 
     @FXML
     private Label encodedText;
