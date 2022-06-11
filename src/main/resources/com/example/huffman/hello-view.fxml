@@ -13,6 +13,10 @@
     </padding>
 
     <TextField fx:id="textField"/>
+    <Label text="Decoded text:" />
+    <Label fx:id="decodedText" wrapText="true"/>
+    <Label text="Encoded text:" />
     <Label fx:id="encodedText" wrapText="true"/>
+    <Button text="Example text" onAction="#onExampleButtonClick"/>
     <Button text="Encode text" onAction="#onHelloButtonClick"/>
 </VBox>
