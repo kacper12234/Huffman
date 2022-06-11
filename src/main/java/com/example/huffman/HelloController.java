@@ -17,6 +17,9 @@ public class HelloController {
     @FXML
     private Label encodedText;
 
+    @FXML
+    private Label decodedText;
+
     private final Huffman huffman;
     private final TreeView treeView;
 
@@ -31,6 +34,7 @@ public class HelloController {
         if(text != null && !text.isBlank()) {
             final Node node = huffman.buildTree(text);
             encodedText.setText(new Huffman().encode(node, text));
+            decodedText.setText(text);
             treeView.drawTree(node);
             final ObservableList<Window> windows = Stage.getWindows();
             if(windows.size() > 1){
@@ -48,5 +52,12 @@ public class HelloController {
             stage.setScene(scene);
             stage.show();
         }
+    }
+
+    @FXML
+    protected void onExampleButtonClick() {
+        final String text = " To begin to toboggan first buy a toboggan, but don't buy too big a toboggan. Too big a toboggan is too big a toboggan to buy to begin to toboggan.";
+        textField.setText(text);
+        onHelloButtonClick();
     }
 }
