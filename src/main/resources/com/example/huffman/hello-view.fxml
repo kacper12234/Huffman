@@ -12,7 +12,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-    <TextArea fx:id="textField" wrapText="true"/>
+    <TextArea fx:id="textField" wrapText="true" prefHeight="150"/>
     <Label text="Decoded text:" />
     <Label fx:id="decodedText" wrapText="true"/>
     <Label text="Encoded text:" />
