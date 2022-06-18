@@ -63,7 +63,8 @@ public class Huffman {
         for(char c: text.toCharArray()){
             freq.put(c, freq.getOrDefault(c, 0) + 1);
         }
-        PriorityQueue<Node> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(l -> l.getFreq()));
+
+        PriorityQueue<Node> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(Node::getFreq));
         freq.forEach((key, value) -> priorityQueue.add(new Node(key, value)));
 
         while(priorityQueue.size() != 1)
@@ -81,6 +82,18 @@ public class Huffman {
 
         System.out.println("Huffman codes are: " + huffmanCode);
         System.out.println("The original string is: " + text);
+
+        double m=0;
+        double h=0;
+        for(Character c: freq.keySet()){
+            int f = freq.get(c);
+            double p=(double)f/text.length();
+            h+=p*Math.log(1/p)/Math.log(2);
+            String code = huffmanCode.get(c);
+            m+=p*code.length();
+        }
+        System.out.println(h);
+        System.out.println(m);
 
         StringBuilder sb = new StringBuilder();
         for(char c: text.toCharArray()){

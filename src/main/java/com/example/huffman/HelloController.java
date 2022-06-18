@@ -56,7 +56,7 @@ public class HelloController {
 
     @FXML
     protected void onExampleButtonClick() {
-        final String text = " To begin to toboggan first buy a toboggan, but don't buy too big a toboggan. Too big a toboggan is too big a toboggan to buy to begin to toboggan.";
+        final String text = "To begin to toboggan first buy a toboggan, but don't buy too big a toboggan. Too big a toboggan is too big a toboggan to buy to begin to toboggan.";
         textField.setText(text);
         onHelloButtonClick();
     }
